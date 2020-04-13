@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # music
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# BafangMusic
+>>>>>>> bb92e8d19a9d24eb90e4b93cd5815bd1f4a167d7
