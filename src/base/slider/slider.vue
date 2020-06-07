@@ -206,7 +206,7 @@ export default {
         height: 12px;
         border-radius: 50%;
         transform :translateY(2px);
-        background: $color-text-ll;
+        background: $color-theme;
       }
     }
   }

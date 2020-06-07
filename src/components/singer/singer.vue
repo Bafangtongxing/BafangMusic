@@ -92,7 +92,7 @@ export default {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0);
       });
       console.log("111");
-      return hot.concat(ret);
+      return [...hot,...ret];
     },
     ...mapMutations({
       setSinger: "SET_SINGER"

@@ -50,9 +50,9 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
+    this.$nextTick(() => {
       this._initScroll()
-    }, 20)
+    })
   },
   methods: {
     _initScroll () {
