@@ -7,6 +7,7 @@ import Singer from "components/singer/singer";
 import SingerDetail from "components/singer-detail/singer-detail";
 import Disc from "components/disc/disc";
 import TopList from "components/top-list/top-list";
+import UserCenter from "components/user-center/user-center";
 Vue.use(VueRouter);
 
 const routes = [
@@ -53,11 +54,15 @@ const routes = [
         component: SingerDetail
       }
     ]
+  },
+  {
+    path: "/user",
+    component: UserCenter
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes
 });

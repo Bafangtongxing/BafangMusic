@@ -1,6 +1,9 @@
 const path = require("path");
 const axios = require("axios");
 const bodyParser = require("body-parser");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -131,5 +134,24 @@ module.exports = {
       .set("base", resolve("src/base"))
       .set("api", resolve("src/api")),
       config.resolve.symlinks(true);
+  },
+  configureWebpack: {
+    plugins: [
+      new BundleAnalyzerPlugin()
+      // 其他 plugins ...
+    ],
+    optimization: {
+      minimizer: [
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            compress: {
+              warnings: false,
+              drop_console: true,
+              pure_funcs: ["console.log"]
+            }
+          }
+        })
+      ]
+    }
   }
 };

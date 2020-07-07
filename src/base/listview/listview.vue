@@ -148,7 +148,7 @@ export default {
       }
       console.log(this.$refs);
 
-      this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 170);
+      this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 3000);
       this.scrollY = this.$refs.listview.scroll.y;
     }
   },
@@ -212,7 +212,7 @@ export default {
       height: 30px;
       line-height: 30px;
       padding-left: 20px;
-      font-size: $font-size-small;
+      font-size: $font-size-medium-x;
       color: $color-text-l;
       background: $color-highlight-background;
     }
@@ -272,7 +272,7 @@ export default {
       line-height: 30px;
       padding-left: 20px;
       margin-top: -2px;
-      font-size: $font-size-small;
+      font-size: $font-size-medium-x;
       color: $color-text-l;
       background: $color-highlight-background;
     }

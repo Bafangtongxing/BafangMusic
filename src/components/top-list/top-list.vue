@@ -1,5 +1,5 @@
 <template>
-  <transition name="slide">
+  <transition name="slide" appear>
     <music-list
       :rank="rank"
       :title="title"

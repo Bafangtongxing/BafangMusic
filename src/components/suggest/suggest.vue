@@ -73,8 +73,6 @@ export default {
       this.hasMore = true
       search(this.query, this.page, this.showSinger, perpage).then((res) => {
         if (res.code === ERR_OK) {
-          console.log(res);
-
           this._genResult(res.data).then((result) => {
             this.result = result
             setTimeout(() => {
