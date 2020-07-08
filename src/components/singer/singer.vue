@@ -40,10 +40,8 @@ export default {
     },
     _getSingerList() {
       getSingerList().then(res => {
-        console.log(res.data.list);
         if (res.code === ERR_OK) {
           this.singers = this._normalizeSinger(res.data.list);
-          console.log(this.singers);
         }
       });
     },
@@ -91,7 +89,6 @@ export default {
       ret.sort((a, b) => {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0);
       });
-      console.log("111");
       return [...hot,...ret];
     },
     ...mapMutations({

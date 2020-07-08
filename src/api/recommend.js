@@ -21,7 +21,7 @@ export function getDiscList() {
   // 线上环境地址，同学们根据自己的需要配置修改
   const url = debug
     ? "/api/getDiscList"
-    : "http://ustbhuangyi.com/music/api/getDiscList";
+    : "http://127.0.0.1/music/api/getDiscList";
 
   const data = Object.assign({}, commonParams, {
     platform: "yqq",
@@ -45,9 +45,7 @@ export function getDiscList() {
 }
 
 export function getSongList(disstid) {
-  const url = debug
-    ? "/api/getCdInfo"
-    : "http://ustbhuangyi.com/music/api/getCdInfo";
+  const url = debug ? "/api/getCdInfo" : "http://127.0.0.1/music/api/getCdInfo";
 
   const data = Object.assign({}, commonParams, {
     disstid,

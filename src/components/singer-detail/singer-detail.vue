@@ -36,7 +36,6 @@ export default {
         return;
       }
       getSingerDetail(this.singer.id).then(res => {
-        console.log(res);
         if (res.code === ERR_OK) {
           processSongsUrl(this._normalizeSongs(res.data.list)).then(songs => {
             this.songs = songs;

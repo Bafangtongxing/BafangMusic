@@ -144,8 +144,8 @@ module.exports = {
       minimizer: [
         new UglifyJsPlugin({
           uglifyOptions: {
+            warnings: false,
             compress: {
-              warnings: false,
               drop_console: true,
               pure_funcs: ["console.log"]
             }

@@ -146,8 +146,6 @@ export default {
       } else if (index > this.listHeight.length - 2) {
         index = this.listHeight.length - 2;
       }
-      console.log(this.$refs);
-
       this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 3000);
       this.scrollY = this.$refs.listview.scroll.y;
     }
